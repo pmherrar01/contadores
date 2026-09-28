@@ -1,0 +1,17 @@
+#!/bin/sh
+# Lo lanza supervisord una vez al arrancar el contenedor: espera a que ChirpStack
+# responda y lo configura (aplicación, integración HTTP, gateways y contadores).
+
+for i in $(seq 1 60); do
+  wget -q -O /dev/null http://127.0.0.1:8080/ && break
+  sleep 2
+done
+
+for intento in 1 2 3 4 5; do
+  node /app/herramientas/provisionar.js && exit 0
+  echo "[provisionar] Reintentando en 10 s ($intento/5)"
+  sleep 10
+done
+
+echo "[provisionar] ERROR: no se pudo configurar ChirpStack; revisa los mensajes anteriores"
+exit 1

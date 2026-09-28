@@ -1,0 +1,17 @@
+{
+  "name": "contadores-lorawan-herramientas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aprovisionamiento de ChirpStack, simulador de contador LoRaWAN y utilidades de prueba",
+  "scripts": {
+    "simular": "node simulador.js",
+    "receptor": "node receptor-prueba.js",
+    "codec": "node probar-codec.js",
+    "probar-endpoint": "node probar-endpoint.js"
+  },
+  "dependencies": {
+    "@chirpstack/chirpstack-api": "^4.19.0",
+    "@grpc/grpc-js": "^1.14.5",
+    "lora-packet": "^0.9.3"
+  }
+}

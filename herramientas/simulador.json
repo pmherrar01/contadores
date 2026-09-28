@@ -1,0 +1,7 @@
+{
+  "servidorUdp": "127.0.0.1:1700",
+  "gatewayId": "aa555a0000000001",
+  "devEui": "a0a0a0a000000001",
+  "joinEui": "0000000000000000",
+  "appKey": "2b7e151628aed2a6abf7158809cf4f3c"
+}

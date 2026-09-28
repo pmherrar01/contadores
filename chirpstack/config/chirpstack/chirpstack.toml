@@ -1,0 +1,34 @@
+# Configuración de ChirpStack v4 (solo EU868).
+# Las variables $NOMBRE las sustituye ChirpStack con el entorno del contenedor.
+
+[logging]
+  level="info"
+
+[postgresql]
+  dsn="postgres://chirpstack:chirpstack@127.0.0.1/chirpstack?sslmode=disable"
+  max_open_connections=10
+  min_idle_connections=0
+
+[redis]
+  servers=["redis://127.0.0.1/"]
+  tls_enabled=false
+  cluster=false
+
+[network]
+  net_id="000000"
+  enabled_regions=["eu868"]
+
+[api]
+  bind="0.0.0.0:8080"
+  # Lo genera entrypoint.sh la primera vez y lo guarda en /data/api_secret.
+  secret="$CHIRPSTACK_API_SECRET"
+
+# Integración global por MQTT interno: publica todos los eventos en el broker
+# del contenedor (útil para depurar con mosquitto_sub). El envío a nuestra API
+# es la integración HTTP de la aplicación, que se configura con provisionar.js.
+[integration]
+  enabled=["mqtt"]
+
+  [integration.mqtt]
+    server="tcp://127.0.0.1:1883/"
+    json=true

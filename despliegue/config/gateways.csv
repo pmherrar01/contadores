@@ -1,0 +1,5 @@
+# Gateways LoRaWAN a dar de alta en ChirpStack. Una línea por gateway.
+# gatewayId: EUI del gateway (16 caracteres hex, viene en su etiqueta). Sin comas en los textos.
+#
+# gatewayId,nombre,descripcion
+082767fffef8e878,Gateway Rime RGWC868LA,MAC 082767F8E878 - IMEI 862487064822469

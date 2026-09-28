@@ -1,0 +1,27 @@
+# Recibe el protocolo Semtech UDP del gateway Rime (puerto 1700) y lo pasa a
+# ChirpStack por el MQTT interno.
+
+[general]
+log_level=4
+
+[backend]
+type="semtech_udp"
+
+  [backend.semtech_udp]
+  udp_bind="0.0.0.0:1700"
+
+[integration]
+marshaler="protobuf"
+
+  [integration.mqtt]
+  event_topic_template="eu868/gateway/{{ .GatewayID }}/event/{{ .EventType }}"
+  state_topic_template="eu868/gateway/{{ .GatewayID }}/state/{{ .StateType }}"
+  command_topic_template="eu868/gateway/{{ .GatewayID }}/command/#"
+
+  [integration.mqtt.auth]
+  type="generic"
+
+    [integration.mqtt.auth.generic]
+    servers=["tcp://127.0.0.1:1883"]
+    username=""
+    password=""

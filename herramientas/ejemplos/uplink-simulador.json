@@ -1,0 +1,59 @@
+{
+  "deduplicationId": "e47c12e1-80d2-4030-b4c0-31e07a669467",
+  "time": "2026-09-24T08:50:32.681+00:00",
+  "deviceInfo": {
+    "tenantId": "0c8af2fb-7116-48be-aea7-d0ee3945688a",
+    "tenantName": "Modularbox",
+    "applicationId": "43fb9344-8a70-4aa6-a256-c749bb312e8e",
+    "applicationName": "Contadores agua",
+    "deviceProfileId": "2380f3af-03ab-4673-82b8-49ecc0766786",
+    "deviceProfileName": "Contador agua ultrasonico EU868",
+    "deviceName": "Contador simulado",
+    "devEui": "a0a0a0a000000001",
+    "deviceClassEnabled": "CLASS_A",
+    "tags": {}
+  },
+  "devAddr": "00210976",
+  "adr": false,
+  "dr": 5,
+  "fCnt": 0,
+  "fPort": 8,
+  "confirmed": true,
+  "data": "aBABHgABAAApXG9AIgAAAHWTGD/NzLTBAQEAAAAAAAAAAF0W",
+  "object": {
+    "valvula": "abierta",
+    "tipo": "lectura",
+    "estado_instrumento": 0,
+    "bateria": 3.74,
+    "alarmas": [],
+    "modo_pago": "prepago",
+    "codigo_alarma": "0000",
+    "volumen_m3": 34.596,
+    "recarga_serie": 1,
+    "saldo_m3": -22.6
+  },
+  "rxInfo": [
+    {
+      "gatewayId": "aa555a0000000001",
+      "uplinkId": 36690,
+      "gwTime": "2026-09-24T08:50:32.681+00:00",
+      "nsTime": "2026-09-24T08:50:32.682315927+00:00",
+      "rssi": -68,
+      "snr": 7.5,
+      "location": {},
+      "context": "sUoqKA==",
+      "crcStatus": "CRC_OK"
+    }
+  ],
+  "txInfo": {
+    "frequency": 868100000,
+    "modulation": {
+      "lora": {
+        "bandwidth": 125000,
+        "spreadingFactor": 7,
+        "codeRate": "CR_4_5"
+      }
+    }
+  },
+  "regionConfigId": "eu868"
+}

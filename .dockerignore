@@ -1,0 +1,6 @@
+**/node_modules
+herramientas/recibidos
+herramientas/.simulador-estado.json
+despliegue
+produccion
+*.jpeg

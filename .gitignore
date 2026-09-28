@@ -1,0 +1,6 @@
+herramientas/node_modules/
+herramientas/recibidos/
+herramientas/.simulador-estado.json
+despliegue/*.tar.gz
+# Lleva el token de producción
+despliegue/chirpstack.env

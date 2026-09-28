@@ -1,0 +1,5 @@
+#!/bin/sh
+# Vuelve a aplicar la configuración sin reiniciar el contenedor, p. ej. después
+# de añadir contadores a config/contadores.csv:
+#     docker exec chirpstack-contadores provisionar
+exec node /app/herramientas/provisionar.js "$@"
